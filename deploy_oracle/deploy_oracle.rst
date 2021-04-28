@@ -164,7 +164,7 @@ Register Your Database
 #. Click **+ Register > Oracle > Single Instance Database**, and then fill out the following fields:
 
    - **Database is on a Server VM that is:** - Registered
-   - **Registered Database Server VMs** - Select your registered *UserXX*\ **-Oracle19cSource VM**
+   - **Registered Database Server VMs** - Select your registered *UserXX*\ **-Oracle19cSource** VM
 
    .. figure:: images/12.png
 

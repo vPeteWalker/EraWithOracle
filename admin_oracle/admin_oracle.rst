@@ -36,7 +36,7 @@ Create New Table
 
    .. code-block:: Bash
 
-     ssh oracle@<UserXX_oracle_prod IP address>
+     ssh oracle@<USERXX_ORACLE_PROD_CLONE1-IP-ADDRESS>
 
 #. Launch **sqlplus**
 
@@ -86,6 +86,10 @@ Create Manual Snapshot
 
    .. figure:: images/13.png
 
+   .. note::
+
+      The time shown for log catch up is an example. Your time may vary. Regardless, you will proceed by clicking **Yes**.
+
 #. Select **Operations** from the dropdown menu to monitor the progress. This process should take approximately 2-5 minutes. Please wait for the *Log Catch Up* operation to successfully complete before moving on to the next step.
 
 #. Return to **Databases > Sources > Time Machine for your database**: *UserXX*\ **_proddb_TM**
@@ -132,8 +136,8 @@ Clone Your Database Server & Database
 
 #. Click **Next**
 
-   - **Clone Name** - *UserXX*\ _proddb_clone1
-   -  **SID** - orclprod
+   - **Name** - *UserXX*\ _proddb_clone1
+   -  **SID** - orclprod (default)
    -  **SYS and SYSTEM Password** - `Nutanix/4u`
    -  **Database Parameter Profile** - ORACLE_SMALL_PARAMS
 
@@ -151,16 +155,16 @@ There are times when a table or other data gets deleted, and you would like to g
 Delete Table
 ............
 
-#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *UserXX*\ **_proddb_clone1** VM using the *IP Addresses* column.
+#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *UserXX*\ **_oracle_prod_clone1** VM using the *IP Addresses* column.
 
-#. SSH (Terminal/Putty) into your *UserXX*\ _proddb_clone1 VM.
+#. SSH (Terminal/Putty) into your *UserXX*\ **_oracle_prod_clone1** VM.
 
    - **User Name** - oracle
    - **Password** - Nutanix/4u
 
    .. code-block:: bash
 
-      ssh oracle@<USERXX-PRODDB-CLONE1-IP-ADDRESS>
+      ssh oracle@<USERXX_ORACLE_PROD_CLONE1-IP-ADDRESS>
 
 #. Launch *sqlplus*.
 
@@ -187,6 +191,8 @@ Delete Table
 
    .. figure:: images/14.png
 
+#.	leave your Terminal or Putty session active, as we will be returning to it shortly.
+
 Refresh Clone
 .............
 
@@ -194,24 +200,24 @@ Refresh Clone
 
 #. Select the Clone for your database *UserXX*\ proddb_clone1, and then click **Refresh**.
 
-   - *Refresh to a* - Snapshot
+   - **Refresh to a** - Snapshot
    - Select the snapshot - *UserXX*\ _proddb_1st_snapshot (Date Time)
 
 #. Click **Refresh**.
 
 #. Select **Operations** from the dropdown menu to monitor the registration. This process should take approximately 10-15 minutes. Please wait for the *Refresh Clone* operation to successfully complete before moving on to the next step.
 
-Verify The Table Has Been Restored
-..................................
+Verify Table Has Been Restored
+..............................
 
-#. SSH (Terminal/Putty) into your *UserXX*\ _proddb_clone1 VM
+#. SSH (Terminal/Putty) into your *UserXX*\ **_oracle_prod_clone1** VM
 
    - **User Name** - oracle
    - **Password** - Nutanix/4u
 
    .. code-block:: Bash
 
-     ssh oracle@<UserXX_proddb_clone1 IP address>
+     ssh oracle@<USERXX_ORACLE_PROD_CLONE1-IP-ADDRESS>
 
 #. Launch **sqlplus**
 

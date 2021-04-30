@@ -48,7 +48,7 @@ Nutanix Era provides DBaaS for your Enterprise Cloud. Leveraging the Nutanix Ent
 
   #. Fill out the following fields:
 
-     - **Project Name** - *UserXX*\ -Project
+     - **Project Name** - *USERXX*\ -Project
      - Under **Users, Groups, and Roles**, select **+ User**
         - **Name** - Administrators
         - **Role** - Project Admin
@@ -74,7 +74,7 @@ Nutanix Era provides DBaaS for your Enterprise Cloud. Leveraging the Nutanix Ent
 
   #. Fill out the following fields to complete the user VM request:
 
-     - **Name** - *UserXX*\ -WinToolsVM
+     - **Name** - *USERXX*\ -WinToolsVM
      - **Description** - Manually deployed Tools VM
      - **vCPU(s)** - 2
      - **Number of Cores per vCPU** - 1
@@ -92,4 +92,4 @@ Nutanix Era provides DBaaS for your Enterprise Cloud. Leveraging the Nutanix Ent
 
   #. Click **Save** to create the VM.
 
-  #. Power on your *UserXX*\ **-WinToolsVM**.
+  #. Power on your *USERXX*\ **-WinToolsVM**.

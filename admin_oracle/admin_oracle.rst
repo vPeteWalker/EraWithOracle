@@ -11,11 +11,11 @@ In this lab, you will administer your Oracle database.
 Explore Your Database
 +++++++++++++++++++++
 
-#. In **Era**, select **Databases** from the dropdown menu, and then **Sources** from the left-hand menu.
+#. In **Era**, select **Databases** from the drop-down menu, and then **Sources** from the left-hand menu.
 
    .. figure:: images/1.png
 
-#. Click on *UserXX*\ **_proddb**. This page provides details of the database, database server VM access, Time Machine schedule, and Compute/Network/Software profiles used to provision.
+#. Click on *USERXX*\ **_proddb**. This page provides details of the database, database server VM access, Time Machine schedule, and Compute/Network/Software profiles used to provision.
 
     .. figure:: images/2.png
 
@@ -27,9 +27,9 @@ Before we create a manual snapshot of your database, let's create a new table.
 Create New Table
 ................
 
-#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *UserXX*\ **_oracle_prod** VM using the *IP Addresses* column.
+#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *USERXX*\ **_oracle_prod** VM using the *IP Addresses* column.
 
-#. SSH (Terminal/Putty) into your *UserXX*\ **_oracle_prod** VM.
+#. SSH (Terminal/Putty) into your *USERXX*\ **_oracle_prod** VM.
 
    - **User Name** - oracle
    - **Password** - Nutanix/4u
@@ -72,9 +72,9 @@ Create New Table
 Create Manual Snapshot
 ......................
 
-#. Within **Era**, select **Databases** from the dropdown menu, and then **Sources** from the left-hand menu.
+#. Within **Era**, select **Databases** from the drop-down menu, and then **Sources** from the left-hand menu.
 
-#. Click on the Time Machine for your database: *UserXX*\ **_proddb_TM**
+#. Click on the Time Machine for your database: *USERXX*\ **_proddb_TM**
 
    .. figure:: images/6.png
 
@@ -90,39 +90,39 @@ Create Manual Snapshot
 
       The time shown for log catch up is an example. Your time may vary. Regardless, you will proceed by clicking **Yes**.
 
-#. Select **Operations** from the dropdown menu to monitor the progress. This process should take approximately 2-5 minutes. Please wait for the *Log Catch Up* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the progress. This process should take approximately 2-5 minutes. Please wait for the *Log Catch Up* operation to successfully complete before moving on to the next step.
 
-#. Return to **Databases > Sources > Time Machine for your database**: *UserXX*\ **_proddb_TM**
+#. Return to **Databases > Sources > Time Machine for your database**: *USERXX*\ **_proddb_TM**
 
 #. Click **Actions > Snapshot**.
 
    .. figure:: images/7.png
 
 #. In the Create Snapshot wizard, complete the following:
-   - **Snapshot Name** - *UserXX*\ _proddb_1st_snapshot
+   - **Snapshot Name** - *USERXX*\ _proddb_1st_snapshot
 
    .. figure:: images/8.png
 
 #. Click **Create**.
 
-#. Select **Operations** from the dropdown menu to monitor the progress. This process should take approximately 2-5 minutes. Please wait for the *Create Snapshot* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the progress. This process should take approximately 2-5 minutes. Please wait for the *Create Snapshot* operation to successfully complete before moving on to the next step.
 
 Clone Your Database Server & Database
 +++++++++++++++++++++++++++++++++++++
 
-#. Within **Era**, select **Time Machines** from the dropdown menu, and then click on *UserXX*\ **_proddb_TM**.
+#. Within **Era**, select **Time Machines** from the drop-down menu, and then click on *USERXX*\ **_proddb_TM**.
 
 #. Click **Actions > Create Single Instance Database Clone**.
 
    - **Clone a Snapshot**
-   - Select the newly created snapshot - *UserXX*\ _proddb_1st_snapshot (Date Time)
+   - Select the newly created snapshot - *USERXX*\ _proddb_1st_snapshot (Date Time)
 
    .. figure:: images/9.png
 
 #. Click **Next**
 
    - **Database Server VM** - Create New Server
-   - **Database Server VM Name** - *UserXX*\ _oracle_prod_clone1
+   - **Database Server VM Name** - *USERXX*\ _oracle_prod_clone1
    - **Compute Profile** - ORACLE_SMALL
    - **Network Profile** - Primary_ORACLE_Network
    - **SSH Public Key Through** - Select **Text**
@@ -136,7 +136,7 @@ Clone Your Database Server & Database
 
 #. Click **Next**
 
-   - **Name** - *UserXX*\ _proddb_clone1
+   - **Name** - *USERXX*\ _proddb_clone1
    -  **SID** - orclprod (default)
    -  **SYS and SYSTEM Password** - `Nutanix/4u`
    -  **Database Parameter Profile** - ORACLE_SMALL_PARAMS
@@ -145,7 +145,7 @@ Clone Your Database Server & Database
 
 #. Click **Clone**.
 
-#. Select **Operations** from the dropdown menu to monitor the progress. This process should take approximately 20-40 minutes. Please wait for the *Clone Database* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the progress. This process should take approximately 20-40 minutes. Please wait for the *Clone Database* operation to successfully complete before moving on to the next step.
 
 Delete Table and Clone Refresh
 ++++++++++++++++++++++++++++++
@@ -155,9 +155,9 @@ There are times when a table or other data gets deleted, and you would like to g
 Delete Table
 ............
 
-#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *UserXX*\ **_oracle_prod_clone1** VM using the *IP Addresses* column.
+#. Within **Prism Central > Virtual Infrastructure > VMs > List**, identify the IP address assigned to the *USERXX*\ **_oracle_prod_clone1** VM using the *IP Addresses* column.
 
-#. SSH (Terminal/Putty) into your *UserXX*\ **_oracle_prod_clone1** VM.
+#. SSH (Terminal/Putty) into your *USERXX*\ **_oracle_prod_clone1** VM.
 
    - **User Name** - oracle
    - **Password** - Nutanix/4u
@@ -196,21 +196,21 @@ Delete Table
 Refresh Clone
 .............
 
-#. In **Era**, select **Databases** from the dropdown menu, and then **Clones** from the left-hand menu.
+#. In **Era**, select **Databases** from the drop-down menu, and then **Clones** from the left-hand menu.
 
-#. Select the Clone for your database *UserXX*\ proddb_clone1, and then click **Refresh**.
+#. Select the Clone for your database *USERXX*\ proddb_clone1, and then click **Refresh**.
 
    - **Refresh to a** - Snapshot
-   - Select the snapshot - *UserXX*\ _proddb_1st_snapshot (Date Time)
+   - Select the snapshot - *USERXX*\ _proddb_1st_snapshot (Date Time)
 
 #. Click **Refresh**.
 
-#. Select **Operations** from the dropdown menu to monitor the registration. This process should take approximately 10-15 minutes. Please wait for the *Refresh Clone* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the registration. This process should take approximately 10-15 minutes. Please wait for the *Refresh Clone* operation to successfully complete before moving on to the next step.
 
 Verify Table Has Been Restored
 ..............................
 
-#. SSH (Terminal/Putty) into your *UserXX*\ **_oracle_prod_clone1** VM
+#. SSH (Terminal/Putty) into your *USERXX*\ **_oracle_prod_clone1** VM
 
    - **User Name** - oracle
    - **Password** - Nutanix/4u

@@ -18,7 +18,7 @@ Using the Era REST API Explorer
 
 Era features an "API first" architecture and provides a fully documented REST API to allow for automation and orchestration of its functions through external tools. Similar to Prism, Era also provides a Rest API Explorer to easily discover and test API functions.
 
-#. From the *Admin* dropdown (top right), select **REST API Explorer**.
+#. From the *Admin* drop-down (top right), select **REST API Explorer**.
 
    .. figure:: images/29.png
 

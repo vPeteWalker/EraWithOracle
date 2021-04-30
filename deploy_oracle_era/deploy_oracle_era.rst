@@ -9,19 +9,19 @@ In this lab, you use Era to deploy a new Oracle database.
 Create Oracle Database with Era
 +++++++++++++++++++++++++++++++
 
-In this exercise you will deploy a new Oracle database using your *UserXX*\ **_ORACLE_19C** 1.0 Software Profile.
+In this exercise you will deploy a new Oracle database using your *USERXX*\ **_ORACLE_19C** 1.0 Software Profile.
 
-#. Select **Databases** from the dropdown menu, and then **Sources** from the left-hand menu.
+#. Select **Databases** from the drop-down menu, and then **Sources** from the left-hand menu.
 
 #. Click **+ Provision > Oracle > Single Instance Database**.
 
 #. In the **Provision an Oracle Single Instance Database** screen, fill out the following fields:
 
    - **Database Server** - Create New Server
-   - **Database Server Name** - *UserXX*\ _oracle_prod
+   - **Database Server Name** - *USERXX*\ _oracle_prod
    - **Description** - (Optional)
    - **Nutanix Cluster** – EraCluster
-   - **Software Profile** - *UserXX*\ _ORACLE_19C
+   - **Software Profile** - *USERXX*\ _ORACLE_19C
    - **Compute Profile** - ORACLE_SMALL
    - **Network Profile** - Primary_ORACLE_NETWORK
    - **ASM Driver** - None (default)
@@ -42,7 +42,7 @@ In this exercise you will deploy a new Oracle database using your *UserXX*\ **_O
 
 #. Click **Next**, and fill out the following fields:
 
-   -  **Database Name** - *UserXX*\ _proddb
+   -  **Database Name** - *USERXX*\ _proddb
    -  **SID** - orclprod
    -  **Global Database Name** - orclprod (default)
    -  **SYS and SYSTEM Password** - `Nutanix/4u`
@@ -63,13 +63,13 @@ In this exercise you will deploy a new Oracle database using your *UserXX*\ **_O
 
 #. Click **Next**, and then fill out the following fields to configure the Time Machine for your database:
 
-   - **Name** - *UserXX*\ _proddb_TM (default)
+   - **Name** - *USERXX*\ _proddb_TM (default)
    - **Description** - (Optional)
    - **SLA** - DEFAULT_OOB_GOLD_SLA
    - **Schedule** - (default)
 
    .. figure:: images/6.png
 
-#. Click **Provision** to begin creating your new database server VM and *UserXX*\ **_proddb** database.
+#. Click **Provision** to begin creating your new database server VM and *USERXX*\ **_proddb** database.
 
-#. Select **Operations** from the dropdown menu to monitor the provisioning. This process should take approximately 30-60 minutes (depending on your cluster configuration). This must complete before you are able to proceed to the next section. Take a moment to stretch, take a bio break, and catch up on e-mail (you haven't been checking e-mail this whole time, have you?!).
+#. Select **Operations** from the drop-down menu to monitor the provisioning. This process should take approximately 30-60 minutes (depending on your cluster configuration). This must complete before you are able to proceed to the next section. Take a moment to stretch, take a bio break, and catch up on e-mail (you haven't been checking e-mail this whole time, have you?!).

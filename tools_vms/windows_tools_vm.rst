@@ -30,7 +30,7 @@ In **Prism Central** > select :fa:`bars` **> Virtual Infrastructure > VMs**, and
 
 Fill out the following fields:
 
-- **Name** - *UserXX*-Windows-ToolsVM
+- **Name** - *USERXX*-Windows-ToolsVM
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 1
 - **Number of Cores per vCPU** - 2

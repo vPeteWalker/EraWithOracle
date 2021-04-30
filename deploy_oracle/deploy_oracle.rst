@@ -21,21 +21,21 @@ This VM is running Oracle 19c with April PSU patches applied.
 
    .. figure:: images/1.png
 
-#. Select the checkbox for *UserXX*\ **-Oracle19cSource**, and click **Actions > Clone**.
+#. Select the checkbox for *USERXX*\ **-Oracle19cSource**, and click **Actions > Clone**.
 
    .. figure:: images/1b.png
 
 #. Fill out the following fields:
 
    - **Number Of Clones** - 1 (default)
-   - **Name** - *UserXX-Oracle19cSource_*\ **Patched**
+   - **Name** - *USERXX-Oracle19cSource_*\ **Patched**
    - **vCPU(s)** - 2 (default)
    - **Number of Cores per vCPU** - 1 (default)
    - **Memory** - 8 GiB (default)
 
 #. Click **Save** to create the VM.
 
-#. Select your *UserXX-Oracle19cSource_*\ **Patched** VM, and click **Actions > Power On**.
+#. Select your *USERXX-Oracle19cSource_*\ **Patched** VM, and click **Actions > Power On**.
 
 Exploring Era Resources
 +++++++++++++++++++++++
@@ -55,7 +55,7 @@ Era is distributed as a virtual appliance that can be installed on either AHV or
    - **Username** - admin
    - **Password** - <CLUSTER-PASSWORD>
 
-#. From the **Dashboard** dropdown, select **Administration**.
+#. From the **Dashboard** drop-down, select **Administration**.
 
 #. Within the *Era Service VMs* section, note that Era has already been configured for your assigned cluster.
 
@@ -71,13 +71,13 @@ Era is distributed as a virtual appliance that can be installed on either AHV or
 ..
 ..    .. figure:: images/era_networks_001.png
 
-#. From the dropdown menu, select **SLAs**.
+#. From the drop-down menu, select **SLAs**.
 
    .. figure:: images/7a.png
 
    Era has five built-in Service Level Agreements - SLAs (Gold, Silver, Bronze, Brass, and None). SLAs control how the database is backed up. This can be with a combination of Continuous, Daily, Weekly, Monthly, and Quarterly protection intervals.
 
-#. From the dropdown menu, select **Profiles**.
+#. From the drop-down menu, select **Profiles**.
 
    Profiles pre-define resources and configurations, making it simple to consistently provision environments and reduce configuration sprawl. For example, *Compute* profiles specify the size of the database server, including details such as vCPUs, cores per vCPU, and memory.
 
@@ -98,12 +98,12 @@ Register Oracle Server with Era
 
 In this exercise, you will register version 1.0 of your Oracle 19c Software Profile. The Software Profile is a template containing both the operating system and database software, and can be used to deploy additional database servers.
 
-#. In **Era**, select **Database Servers VMs** from the dropdown menu, and then **List** from the left-hand menu.
+#. In **Era**, select **Database Servers VMs** from the drop-down menu, and then **List** from the left-hand menu.
 
 #. Click **+ Register > Oracle**, then fill out the following *Register Database Server VMs* fields:
 
    - **Nutanix Cluster** - EraCluster
-   - **IP Address or Name of VM** - *UserXX*\ **-Oracle19cSource**
+   - **IP Address or Name of VM** - *USERXX*\ **-Oracle19cSource**
    - **Listener Port** - 1521 (default)
    - **Era Drive User** - `oracle`
    - **Oracle Database Home** - `/u02/app/oracle/product/19.0.0/dbhome_1`
@@ -129,20 +129,20 @@ In this exercise, you will register version 1.0 of your Oracle 19c Software Prof
 
 #. Click **Close**.
 
-#. Select **Operations** from the dropdown menu to monitor the progress. This process should take <5 minutes. Please wait for the *Register Database Server VM* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the progress. This process should take <5 minutes. Please wait for the *Register Database Server VM* operation to successfully complete before moving on to the next step.
 
-   Once the *UserXX*\ **-Oracle19cSource** server has been registered with Era, we need to create a software profile in order to deploy additional Oracle VMs.
+   Once the *USERXX*\ **-Oracle19cSource** server has been registered with Era, we need to create a software profile in order to deploy additional Oracle VMs.
 
-#. Select **Profiles** from the dropdown menu, and then **Software** from the left-hand menu.
+#. Select **Profiles** from the drop-down menu, and then **Software** from the left-hand menu.
 
 #. Click **+ Create > Oracle > Single Instance Database**, and then fill out the following fields:
 
-   - **Profile Name** - *UserXX*\ _ORACLE_19C
+   - **Profile Name** - *USERXX*\ _ORACLE_19C
    - **Profile Description** - (Optional)
-   - **Software Profile Version Name** - UserXX_ORACLE_19C (1.0) (default)
+   - **Software Profile Version Name** - USERXX_ORACLE_19C (1.0) (default)
    - **Software Profile Version Description** - (Optional)
    - **Nutanix Cluster** - EraCluster
-   - Select your registered *UserXX*\ **-Oracle19cSource** VM
+   - Select your registered *USERXX*\ **-Oracle19cSource** VM
 
    .. figure:: images/3.png
 
@@ -152,25 +152,25 @@ In this exercise, you will register version 1.0 of your Oracle 19c Software Prof
 
 #. Click **Create**.
 
-#. Select **Operations** from the dropdown menu to monitor the registration. This process should take <5 minutes. Please wait for the *Create Software Profile* operation to successfully complete before moving on to the next step.
+#. Select **Operations** from the drop-down menu to monitor the registration. This process should take <5 minutes. Please wait for the *Create Software Profile* operation to successfully complete before moving on to the next step.
 
 Register Your Database
 ++++++++++++++++++++++
 
-#. Within **Era**, select **Databases** from the dropdown menu, and then **Sources** from the left-hand menu.
+#. Within **Era**, select **Databases** from the drop-down menu, and then **Sources** from the left-hand menu.
 
    .. figure:: images/11.png
 
 #. Click **+ Register > Oracle > Single Instance Database**, and then fill out the following fields:
 
    - **Database is on a Server VM that is:** - Registered
-   - **Registered Database Server VMs** - Select your registered *UserXX*\ **-Oracle19cSource** VM
+   - **Registered Database Server VMs** - Select your registered *USERXX*\ **-Oracle19cSource** VM
 
    .. figure:: images/12.png
 
 #. Click **Next**, and then fill out the following fields:
 
-   - **Database Name in Era** - *UserXX*\ _orcl
+   - **Database Name in Era** - *USERXX*\ _orcl
    - **SID** - orcl19c
 
    .. note::
@@ -181,11 +181,11 @@ Register Your Database
 
 #. Click **Next**, and then fill out the following fields:
 
-   - **Name** - *UserXX*\ _orcl_TM (default)
+   - **Name** - *USERXX*\ _orcl_TM (default)
    - **SLA** - DEFAULT_OOB_GOLD_SLA
 
    .. figure:: images/14.png
 
 #. Click **Register**.
 
-#. Select **Operations** from the dropdown menu to monitor the progress. This process should take <5 minutes. Please wait for the *Register Database* operation to successfully complete before moving on to the next section.
+#. Select **Operations** from the drop-down menu to monitor the progress. This process should take <5 minutes. Please wait for the *Register Database* operation to successfully complete before moving on to the next section.

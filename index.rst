@@ -112,9 +112,16 @@ The instructor will advise the attendees of their assigned clusters.
 Environment Details
 +++++++++++++++++++
 
-Nutanix Workshops are intended to be run in the Nutanix Hosted POC environment. Your cluster will be provisioned with all necessary images, networks, and VMs required to complete the exercises.
+Nutanix workshops are intended to be run in the Nutanix Hosted POC (HPOC) environment. Your cluster will be provisioned with all necessary images, networks, and VMs required to complete the exercises.
 
-Each cluster has a dedicated domain controller VM, responsible for providing Active Directory services for the *NTNXLAB.local* domain. The domain is populated with the following Users and Groups:
+Credentials
+...........
+
+.. note::
+
+  The *<Cluster Password>* is unique to each cluster, and will be provided by the leader of the workshop.
+
+Each cluster has a dedicated domain controller VM, responsible for providing Active Directory services for the *NTNXLAB.local* domain. The domain is populated with the following users and groups:
 
 .. list-table::
    :widths: 25 35 40

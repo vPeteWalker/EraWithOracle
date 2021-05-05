@@ -1,12 +1,10 @@
-.. title:: Databases: Era with Oracle Bootcamp
-
 .. toctree::
    :maxdepth: 2
    :caption: Era with Oracle
    :name: _dbs
    :hidden:
 
-   deploy_oracle/deploy_oracle
+   configure_oracle/configure_oracle
    deploy_oracle_era/deploy_oracle_era
    admin_oracle/admin_oracle
    patching_oracle/patching_oracle
@@ -17,7 +15,11 @@
   :name: _optional_labs
   :hidden:
 
+  prismops_appmonitoring_lab/prismops_appmonitoring_lab
   era_rest_api/era_rest_api
+..  flow_secure_fiesta/flow_secure_fiesta
+  flow_isolate_fiesta/flow_isolate_fiesta
+
 
 .. toctree::
   :maxdepth: 2
@@ -28,16 +30,19 @@
   appendix/glossary
 ..  tools_vms/windows_tools_vm
   tools_vms/linux_tools_vm
-  labsetup/labsetup
 
 
 .. _getting_started:
+
+===============
+Getting Started
+===============
 
 ---------------
 Getting Started
 ---------------
 
-Welcome to the *Databases: Era with Oracle* bootcamp. This bootcamp is meant to provide you with first-hand experience in why Nutanix is an ideal platform for database workloads.
+Welcome to the *Databases: Era with Oracle* bootcamp. This bootcamp is meant to provide you with first-hand experience in why Nutanix is the ideal platform for database workloads.
 
 Historically, it has been a challenge to virtualize Oracle because of the high cost of traditional virtualization stacks, and the impact that a SAN-based architecture can have on performance. Businesses and their IT departments have constantly fought to balance cost, operational simplicity, consistent, and predictable performance.
 

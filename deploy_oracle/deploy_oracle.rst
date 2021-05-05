@@ -1,8 +1,8 @@
-.. _deploy_oracle:
+.. _configure_oracle:
 
------------------
-Deploying Oracle
------------------
+-------------------------------------------
+Configuring Your Oracle and Era Environment
+-------------------------------------------
 
 Traditional database VM deployment resembles the diagram below. The process generally starts with an IT ticket for a database (from Dev, Test, QA, Analytics, etc.). Next, one or more teams will need to deploy the storage resources, and VM(s) required. Once the infrastructure portion is ready, a database administrator (DBA) needs to provision, and configure database software. Once provisioned, any best practices and data protection/backup policies need to be applied. Finally, the database can be handed over to the end user. That's a lot of handoffs, potential for a lot of friction, including human error or even inconsistency.
 
